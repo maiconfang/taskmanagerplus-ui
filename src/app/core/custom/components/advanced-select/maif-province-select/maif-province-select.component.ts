@@ -1,22 +1,22 @@
 import { Component, Input, Output, OnInit, TemplateRef, EventEmitter  } from '@angular/core';
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { StateService } from 'src/app/application/state/state.service'; 
+import { ProvinceService } from 'src/app/application/province/province'; 
 import { Page } from 'src/app/core/pagination-table/pagination-table'; 
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-maif-state-select',
-  templateUrl: './maif-state-select.component.html',
-  styleUrls: ['./maif-state-select.component.scss']
+  selector: 'app-maif-province-select',
+  templateUrl: './maif-province-select.component.html',
+  styleUrls: ['./maif-province-select.component.scss']
 })
-export class MaifStateSelectComponent implements OnInit {
+export class MaifProvinceSelectComponent implements OnInit {
 
-  @Output() public stateSelectOutPut: EventEmitter<any> = new EventEmitter();
+  @Output() public provinceSelectOutPut: EventEmitter<any> = new EventEmitter();
 
-  public entitiesStateSelect = [];
-  public pageStateSelect: Page;
+  public entitiesProvinceSelect = [];
+  public pageProvinceSelect: Page;
   public form: FormGroup;
   
   
@@ -24,7 +24,7 @@ export class MaifStateSelectComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    protected stateService: StateService,
+    protected provinceService: ProvinceService,
     private modalService: BsModalService,
     ) {}
 
@@ -52,8 +52,8 @@ export class MaifStateSelectComponent implements OnInit {
      this.modalService.hide();
   }
 
-  selectState(entity: any){
-    this.stateSelectOutPut.emit(entity)
+  selectProvince(entity: any){
+    this.provinceSelectOutPut.emit(entity)
     this.closeModalWithClass();
     
   }
@@ -63,13 +63,13 @@ export class MaifStateSelectComponent implements OnInit {
   }
 
   search(paginator = 0) {
-    this.stateService.listPaginated(this.form.value, paginator)
+    this.provinceService.listPaginated(this.form.value, paginator)
     .subscribe(data => {
-      this.pageStateSelect = data.page;
+      this.pageProvinceSelect = data.page;
       if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
-        this.entitiesStateSelect = data._embedded.states
+        this.entitiesProvinceSelect = data._embedded.provinces
       } else
-        this.entitiesStateSelect = []
+        this.entitiesProvinceSelect = []
     });
       
   }
@@ -78,7 +78,7 @@ export class MaifStateSelectComponent implements OnInit {
     this.form.patchValue({
       id: null,
       name: null,
-      fs: null,
+      abbreviation: null,
       
     });
   }

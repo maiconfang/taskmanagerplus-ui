@@ -17,10 +17,10 @@ import { NotAuthorizedComponent } from '../core/not-authorized.component';
 import { PageNotFoundComponent } from '../core/page-not-found.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
-import { StateModule } from './state/state.module';
-import { StateService } from './state/state.service';
-import { StateRegisterComponent } from './state/state-register/state-register.component';
-import { StateSearchComponent } from './state/state-search/state-search.component';
+import { ProvinceModule } from './province/province.module';
+import { ProvinceService } from './province/province.service';
+import { ProvinceRegisterComponent } from './province/province-register/province-register.component';
+import { ProvinceSearchComponent } from './province/province-search/province-search.component';
 
 import { GroupModule } from './group/group.module';
 import { GroupService } from './group/group.service';
@@ -43,9 +43,9 @@ const routesApp: Routes = [
       { path: 'user/new', component: UserRegisterComponent },
       { path: 'user/:id', component: UserRegisterComponent },
 
-      { path: 'state', component: StateSearchComponent },
-      { path: 'state/new', component: StateRegisterComponent },
-      { path: 'state/:id', component: StateRegisterComponent },
+      { path: 'province', component: ProvinceSearchComponent },
+      { path: 'province/new', component: ProvinceRegisterComponent },
+      { path: 'province/:id', component: ProvinceRegisterComponent },
 
       { path: 'group', component: GroupSearchComponent },
       { path: 'group/new', component: GroupRegisterComponent },
@@ -77,7 +77,7 @@ const routesApp: Routes = [
     TooltipModule.forRoot(),
     SharedModule,
     UserModule,
-    StateModule,
+    ProvinceModule,
     GroupModule,
     GroupPermissionModule,
   ],
@@ -86,7 +86,7 @@ const routesApp: Routes = [
   ],
   providers: [
     UserService,
-    StateService,
+    ProvinceService,
     GroupService,
     GroupPermissionService
   ]

@@ -456,12 +456,12 @@
 		"LOGOUT": " Sair"
 	},
 	"SIDE_BAR": {
-		"STATE": "Estado",
+		"PROVINCE": "Estado",
 		"GROUP": "Grupo",
 		"GROUP_PERMISSION": "Grupo Permissão",
 		"USER": "Usuário",
 		"SEE_POSTS": "Ver Registros",
-		"ADD_STATE": "Adicionar Estado",
+		"ADD_PROVINCE": "Adicionar Estado",
 		"ADD_GROUP": "Adicionar Grupo",
 		"ADD_GROUP_PERMISSION": "Adicionar Grupo Permissão",
 		"ADD_USER": "Adicionar Usuário"
@@ -499,17 +499,17 @@
 		"TITLE_EDIT": "Edição do Usuário",
 		"TITLE_NEW": "Novo Usuário"
 	},
-	"STATE": {
+	"PROVINCE": {
 		"SEARCH_COLUMN_NAME": "Estado",
-		"SEARCH_COLUMN_FS": "Sigla do estado",
-		"STATE_LABEL_FILTER": "Nome do estado",
+		"SEARCH_COLUMN_ABBREVIATION": "Sigla do estado",
+		"PROVINCE_LABEL_FILTER": "Nome do estado",
 		"LABEL_NAME": "Nome do estado",
-		"LABEL_FS": "Sigla do estado",
+		"LABEL_abbreviation": "Sigla do estado",
 		"TITLE_CONSULT": "Consultar Estado",
 		"TITLE_EDIT": "Edição do Estado",
 		"TITLE_NEW": "Novo Estado",
-		"TOOLTIP_STATE": "Nome do estado",
-		"TOOLTIP_FS": "Sigla do estado"
+		"TOOLTIP_PROVINCE": "Nome do estado",
+		"TOOLTIP_abbreviation": "Sigla do estado"
 	},
 
 	"GROUP": {
@@ -537,21 +537,21 @@
 		"STATUS_500": "Erro ao processar sua requisição",
 		"STATUS_DEFAULT": "Servidor não encontrado"
 	},
-	"MAIF_STATE_SELECT": {
-		"BUTTON_SELECT_STATE": "Selecione o Estado",
-		"TOOLTIP_BUTTON_SELECT_STATE": "Selecione o estado",
+	"MAIF_PROVINCE_SELECT": {
+		"BUTTON_SELECT_PROVINCE": "Selecione o Estado",
+		"TOOLTIP_BUTTON_SELECT_PROVINCE": "Selecione o estado",
 		"TITLE": "Lista de Estados",
-		"LABEL_STATE": "Nome do estado",
+		"LABEL_PROVINCE": "Nome do estado",
 		"TOOLTIP_BUTTON_FILTER": "Consultar estado",
 		"SEARCH_COLUMN_ID": "Código",
 		"SEARCH_COLUMN_NAME": "Estado",
-		"SEARCH_COLUMN_FS": "UF",
+		"SEARCH_COLUMN_ABBREVIATION": "UF",
 		"BUTTON_CLOSE": "Fechar",
 		"TOOLTIP_BUTTON_CLOSE": "Fechar",
 		"TOOLTIP_BUTTON_SELECT": "Selecione o estado",
 		"TOOLTIP_ID": "Código do estado",
 		"TOOLTIP_NAME": "Nome do estado",
-		"TOOLTIP_FS": "UF",
+		"TOOLTIP_ABBREVIATION": "UF",
 		"PLACE_HOLDER_NAME": "Nome do estado"
 	},
 

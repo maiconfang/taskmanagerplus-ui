@@ -3,26 +3,26 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 import { CrudServiceImpl } from 'src/app/core/crud-generic/crud-service-impl';
-import { StateFilter } from './state';
+import { ProvinceFilter } from './province';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StateService extends CrudServiceImpl {
+export class ProvinceService extends CrudServiceImpl {
 
-  stateUrl: string;
+  provinceUrl: string;
 
   constructor(protected http: HttpClient) {
     super(http);
-    this.stateUrl = `${environment.apiUrl}/v1/states`;
+    this.provinceUrl = `${environment.apiUrl}/v1/provinces`;
   }
 
   getUrlResource(): string {
-    return this.stateUrl
+    return this.provinceUrl
   }
 
-  listPaginated(filter: StateFilter, page: number, parameters = new HttpParams()): Observable<any> {
+  listPaginated(filter: ProvinceFilter, page: number, parameters = new HttpParams()): Observable<any> {
 
     if (filter.name) {
       parameters = parameters.set('name', filter.name);
@@ -32,7 +32,7 @@ export class StateService extends CrudServiceImpl {
   }
 
   listAllNoPagination(): Promise<any> {
-    return this.http.get<any>(this.stateUrl + "/noPagination")
+    return this.http.get<any>(this.provinceUrl + "/noPagination")
       .toPromise()
       .then(response => response);
   }

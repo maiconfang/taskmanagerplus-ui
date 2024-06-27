@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MaifStateSelectComponent } from './maif-state-select.component';
+import { MaifProvinceSelectComponent } from './maif-province-select.component';
 import { PaginationTableModule } from 'src/app/core/pagination-table/pagination-table.module';
 import { SharedModule } from 'src/app/shared/shared.module'; 
 
@@ -12,10 +12,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
       SharedModule,
     ],
     declarations: [ 
-      MaifStateSelectComponent 
+      MaifProvinceSelectComponent 
     ],
     exports: [
-       MaifStateSelectComponent 
+       MaifProvinceSelectComponent 
       ]
   })
-export class MaifStateSelectModule { }
+export class MaifProvinceSelectModule { }

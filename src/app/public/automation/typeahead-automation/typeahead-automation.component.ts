@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TypeaheadAutomationComponent implements OnInit {
 
   selected?: string;
-  states: string[] = [
+  provinces: string[] = [
     "Alberta",
     "British Columbia",
     "Manitoba",

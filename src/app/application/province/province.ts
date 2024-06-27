@@ -1,8 +1,8 @@
-export class State {
+export class Province {
     id: number;
     name: string;
   }
   
-  export class StateFilter {
+  export class ProvinceFilter {
     name: string;
   }

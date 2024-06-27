@@ -455,12 +455,12 @@
 		"LOGOUT": " Logout"
 	},
 	"SIDE_BAR": {
-		"STATE": "State",
+		"PROVINCE": "Province",
 		"GROUP": "Group",
 		"GROUP_PERMISSION": "Group Permission",
 		"USER": "User",
 		"SEE_POSTS": "See Records",
-		"ADD_STATE": "Add State",
+		"ADD_PROVINCE": "Add Province",
 		"ADD_GROUP": "Add Group",
 		"ADD_GROUP_PERMISSION": "Add Group Permission",
 		"ADD_USER": "Add User"
@@ -498,17 +498,17 @@
 		"TITLE_EDIT": "Edit of User",
 		"TITLE_NEW": "New User"
 	},
-	"STATE": {
-		"SEARCH_COLUMN_NAME": "State",
-		"SEARCH_COLUMN_FS": "Federation of state",
-		"STATE_LABEL_FILTER": "Name of state",
-		"LABEL_NAME": "Name of state",
-		"LABEL_FS": "Name of federation of state",
-		"TITLE_CONSULT": "Consult State",
-		"TITLE_EDIT": "Edit of State",
-		"TITLE_NEW": "New State",
-		"TOOLTIP_STATE": "Name of state",
-		"TOOLTIP_FS": "Name of federation of state"
+	"PROVINCE": {
+		"SEARCH_COLUMN_NAME": "Province",
+		"SEARCH_COLUMN_ABBREVIATION": "Abbreviation of Province",
+		"PROVINCE_LABEL_FILTER": "Name of province",
+		"LABEL_NAME": "Province",
+		"LABEL_ABBREVIATION": "Abbreviation",
+		"TITLE_CONSULT": "Consult Province",
+		"TITLE_EDIT": "Edit of Province",
+		"TITLE_NEW": "New Province",
+		"TOOLTIP_PROVINCE": "Name of Province",
+		"TOOLTIP_ABBREVIATION": "Abbreviation of Province"
 	},
 	"GROUP": {
 		"SEARCH_COLUMN_NAME": "Group",
@@ -534,22 +534,22 @@
 		"STATUS_500": "Error processing your request",
 		"STATUS_DEFAULT": "Server not found"
 	},
-	"MAIF_STATE_SELECT": {
-		"BUTTON_SELECT_STATE": "Select the State",
-		"TOOLTIP_BUTTON_SELECT_STATE": "Select the state",
-		"TITLE": "List of States",
-		"LABEL_STATE": "Name of state",
-		"TOOLTIP_BUTTON_FILTER": "Consult of state",
+	"MAIF_PROVINCE_SELECT": {
+		"BUTTON_SELECT_PROVINCE": "Select the Province",
+		"TOOLTIP_BUTTON_SELECT_PROVINCE": "Select the province",
+		"TITLE": "List of Provinces",
+		"LABEL_PROVINCE": "Name of province",
+		"TOOLTIP_BUTTON_FILTER": "Consult of province",
 		"SEARCH_COLUMN_ID": "Code",
-		"SEARCH_COLUMN_NAME": "State",
-		"SEARCH_COLUMN_FS": "Federation of State",
+		"SEARCH_COLUMN_NAME": "Province",
+		"SEARCH_COLUMN_ABBREVIATION": "Abbreviation of province",
 		"BUTTON_CLOSE": "Close",
 		"TOOLTIP_BUTTON_CLOSE": "Close",
-		"TOOLTIP_BUTTON_SELECT": "Select the state",
-		"TOOLTIP_ID": "Code of state",
-		"TOOLTIP_NAME": "Name of state",
-		"TOOLTIP_FS": "Federation of State",
-		"PLACE_HOLDER_NAME": "Name of state"
+		"TOOLTIP_BUTTON_SELECT": "Select the province",
+		"TOOLTIP_ID": "Code of province",
+		"TOOLTIP_NAME": "Name of province",
+		"TOOLTIP_ABBREVIATION": "Abbreviation of province",
+		"PLACE_HOLDER_NAME": "Name of province"
 	},
 
 	"GROUP_PERMISSION": {

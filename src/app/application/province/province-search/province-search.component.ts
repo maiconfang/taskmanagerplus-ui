@@ -5,25 +5,25 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BsModalService } from 'ngx-bootstrap/modal';
 
-import { StateService } from '../state.service';
+import { ProvinceService } from '../province.service';
 import { MessageToastService } from 'src/app/core/message-toast/message.toast.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-state-search',
-  templateUrl: './state-search.component.html',
-  styleUrls: ['./state-search.component.scss'],
+  selector: 'app-province-search',
+  templateUrl: './province-search.component.html',
+  styleUrls: ['./province-search.component.scss'],
 })
-export class StateSearchComponent extends CrudSearchImpl implements OnInit {
+export class ProvinceSearchComponent extends CrudSearchImpl implements OnInit {
 
   constructor(
     protected translate: TranslateService,
     private formBuilder: FormBuilder,
     private router: Router,
-    protected stateService: StateService,
+    protected provinceService: ProvinceService,
     protected toastService: MessageToastService,
     protected modalService: BsModalService) {
-    super(translate, stateService, toastService, modalService);
+    super(translate, provinceService, toastService, modalService);
   }
 
   ngOnInit() {
@@ -35,7 +35,7 @@ export class StateSearchComponent extends CrudSearchImpl implements OnInit {
   }
 
   new() {
-    this.router.navigate(['/state/new']);
+    this.router.navigate(['/province/new']);
   }
 
   confirmRemoval(entity: any, identification = '') {
@@ -47,7 +47,7 @@ export class StateSearchComponent extends CrudSearchImpl implements OnInit {
       .subscribe(data => {
         this.page = data.page;
         if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
-          this.entities = data._embedded.states
+          this.entities = data._embedded.provinces
         } else
           this.entities = [{}]
       });

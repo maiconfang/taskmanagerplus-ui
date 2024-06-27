@@ -2,8 +2,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { StateRegisterComponent } from './state-register/state-register.component';
-import { StateSearchComponent } from './state-search/state-search.component';
+import { ProvinceRegisterComponent } from './province-register/province-register.component';
+import { ProvinceSearchComponent } from './province-search/province-search.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PaginationTableModule } from 'src/app/core/pagination-table/pagination-table.module';
 
@@ -12,7 +12,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 @NgModule({
-  declarations: [StateRegisterComponent, StateSearchComponent],
+  declarations: [ProvinceRegisterComponent, ProvinceSearchComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -21,6 +21,6 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     TooltipModule.forRoot(),
     AccordionModule.forRoot()
   ],
-  exports: [StateRegisterComponent, StateSearchComponent]
+  exports: [ProvinceRegisterComponent, ProvinceSearchComponent]
 })
-export class StateModule { }
+export class ProvinceModule { }

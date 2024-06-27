@@ -3,27 +3,27 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { StateService } from '../state.service';
+import { ProvinceService } from '../province.service';
 import { MessageToastService } from '../../../core/message-toast/message.toast.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-state-register',
-  templateUrl: './state-register.component.html',
-  styleUrls: ['./state-register.component.scss']
+  selector: 'app-province-register',
+  templateUrl: './province-register.component.html',
+  styleUrls: ['./province-register.component.scss']
 })
-export class StateRegisterComponent extends CrudRegisterImpl implements OnInit {
+export class ProvinceRegisterComponent extends CrudRegisterImpl implements OnInit {
 
-  titleState: string;
+  titleProvince: string;
 
   constructor(
     protected translate: TranslateService,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    protected stateService: StateService,
+    protected provinceService: ProvinceService,
     protected toastService: MessageToastService) {
-    super(translate, stateService, toastService);
+    super(translate, provinceService, toastService);
     this.createForm();
   }
 
@@ -32,13 +32,13 @@ export class StateRegisterComponent extends CrudRegisterImpl implements OnInit {
     const id = this.route.snapshot.params['id'];
 
     if (id) {
-      this.translate.get('STATE.TITLE_EDIT').subscribe((text: string) => {
-        this.titleState = text;
+      this.translate.get('PROVINCE.TITLE_EDIT').subscribe((text: string) => {
+        this.titleProvince = text;
       });
       this.findEntity(id);
     } else {
-      this.translate.get('STATE.TITLE_NEW').subscribe((text: string) => {
-        this.titleState = text
+      this.translate.get('PROVINCE.TITLE_NEW').subscribe((text: string) => {
+        this.titleProvince = text
       });
     }
 
@@ -48,16 +48,16 @@ export class StateRegisterComponent extends CrudRegisterImpl implements OnInit {
     this.form = this.formBuilder.group({
       id: [''],
       name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
-      fs: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(5)]]
+      abbreviation: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(5)]]
     });
   }
 
   redirectAfterAdd(entity: any) {
-    this.router.navigate(['/app/state', entity.id]);
+    this.router.navigate(['/app/province', entity.id]);
   }
 
   backToSearch() {
-    this.router.navigate(['/state']);
+    this.router.navigate(['/province']);
   }
 
 }
