@@ -1,0 +1,46 @@
+<section class="container mt-5">
+
+  <form>
+
+    <section class="container mt-5 text">
+      <div>PROFESSIONAL PROJECT HIGHLIGHTS</div>
+      <div *ngFor='let job of "about_projects" | translate; let i = index'>
+        <h1>
+          <strong>{{ job.titleProject }}  </strong>
+        </h1>
+
+        <h1>
+          {{ job.companyName }} - {{job.period}}
+        </h1>
+
+        <ul>
+          <li style="margin-left: 10px;" >{{ job.description }}</li>
+        </ul>
+
+
+        <div style="margin-left: 10px; margin-top: 10px;">
+          <strong>{{ 'about_project_titles.language' | translate }}:</strong>
+          <ng-container *ngFor="let languages of job.languages; let last = last">
+            {{ languages }}{{ !last ? ', ' : '' }}
+          </ng-container>
+        </div>
+
+        <div style="margin-left: 10px; margin-top: 10px;">
+          <strong>{{ 'about_project_titles.tool' | translate }}:</strong>
+          <ng-container *ngFor="let tool of job.tools; let last = last">
+            {{ tool }}{{ !last ? ', ' : '' }}
+          </ng-container>
+        </div>
+
+        <br>
+      </div>
+
+    </section>
+
+  </form>
+
+</section>
+
+
+
+

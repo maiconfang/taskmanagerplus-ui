@@ -1,0 +1,95 @@
+<section class="container mt-5">
+
+  <form>
+
+    <div class="form-row">
+
+      <tabset>
+
+        <!-- About Me -->
+        <tab heading="{{ 'about_tabs.tab_1' | translate }}" id="tab1" class="text">
+          {{ 'about_info.description' | translate }}
+        </tab>
+
+        <tab heading="{{ 'about_tabs.tab_2' | translate }}" id="tab2" class="text">
+
+          <div class="form-row">
+
+            <div *ngFor='let skills of "Experience.skills" | translate; let i = index'>
+              <ul>
+                <li *ngFor="let skills of skills.skills">{{ skills }}</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </tab>
+
+        <!-- Experience -->
+        <tab heading="{{ 'about_tabs.tab_3' | translate }}" id="tab3" class="text">
+
+          <section class="container mt-5">
+            <div *ngFor='let job of "Experience.jobs" | translate; let i = index'>
+              <h1>
+                <strong>{{ job.title }} - {{ job.companyName }} - {{job.startDateMonth}} {{ job.startDateYear }} /
+                  {{job.endDateMonth}} {{ job.endDateYear }}</strong>
+              </h1>
+
+              <ul>
+                <li *ngFor="let description of job.description">{{ description }}</li>
+              </ul>
+
+              <div id="skillsOfJob" style="margin-left: 10px;">
+                <strong>{{ 'Experience.jobsTitles.skills' | translate }}:</strong>
+                <ng-container *ngFor="let skill of job.skills; let last = last">
+                  {{ skill }}{{ !last ? ', ' : '' }}
+                </ng-container>
+              </div>
+
+              <div id="otherDetails" style="margin-left: 10px; margin-top: 10px;">
+                <strong>{{ 'Experience.jobsTitles.location' | translate }}: </strong> {{job.location}}                
+              </div>
+
+              <br>
+            </div>
+
+          </section>
+
+
+        </tab>
+
+        <!-- Education  -->
+        <tab heading="{{ 'about_tabs.tab_4' | translate }}" id="tab4" class="text">
+          <div *ngFor='let about of "about_education" | translate; let i = index'>
+            <h1>
+              {{ about.title }} - {{ about.description }}
+            </h1>
+          </div>
+        </tab>
+
+        <!-- Languages -->
+        <tab heading="{{ 'about_tabs.tab_5' | translate }}" id="tab5" class="text">
+          <div *ngFor='let about of "about_languages" | translate; let i = index'>
+            <h1>
+              {{ about.title }} - {{ about.description }}
+            </h1>
+          </div>
+        </tab>
+
+        <!-- Courses -->
+        <tab heading="{{ 'about_tabs.tab_6' | translate }}" id="tab6" class="text">
+
+          <div *ngFor='let about of "about_courses" | translate; let i = index'>
+            <h1>
+              {{ about.title }}
+            </h1>
+          </div>
+
+        </tab>
+
+      </tabset>
+    </div>
+
+  </form>
+
+</section>
