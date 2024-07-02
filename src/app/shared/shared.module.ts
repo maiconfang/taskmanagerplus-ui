@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { FormDebugComponent } from './form-debug/form-debug.component';
-import { FormMessagesErroComponent } from './form-messages-erro/form-messages-erro.component';
+import { FormMessagesErrorComponent } from './form-messages-error/form-messages-error.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -26,7 +26,7 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 @NgModule({
   declarations: [
     FormDebugComponent,
-    FormMessagesErroComponent
+    FormMessagesErrorComponent
   ],
   imports: [
     CommonModule,
@@ -51,7 +51,7 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     FormsModule,
     ReactiveFormsModule,
     FormDebugComponent,
-    FormMessagesErroComponent,
+    FormMessagesErrorComponent,
     RouterModule,
     AlertModule,
     BsDropdownModule,

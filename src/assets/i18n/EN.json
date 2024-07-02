@@ -456,11 +456,13 @@
 	},
 	"SIDE_BAR": {
 		"PROVINCE": "Province",
+		"TASK": "Task",
 		"GROUP": "Group",
 		"GROUP_PERMISSION": "Group Permission",
 		"USER": "User",
 		"SEE_POSTS": "See Records",
 		"ADD_PROVINCE": "Add Province",
+		"ADD_TASK": "Add Task",
 		"ADD_GROUP": "Add Group",
 		"ADD_GROUP_PERMISSION": "Add Group Permission",
 		"ADD_USER": "Add User"
@@ -510,6 +512,24 @@
 		"TOOLTIP_PROVINCE": "Name of Province",
 		"TOOLTIP_ABBREVIATION": "Abbreviation of Province"
 	},
+
+	"TASK": {
+		"SEARCH_COLUMN_TITLE": "Task",
+		"SEARCH_COLUMN_DESCRIPTION": "Description of task",
+		"TASK_LABEL_FILTER": "Title of task",
+		"LABEL_TITLE": "Title of task",
+		"LABEL_DESCRIPTION": "Description of task",
+		"LABEL_DUEDATE": "Due Date of task",
+		"LABEL_COMPLETED": "Task completed",
+		"TITLE_CONSULT": "Consult Task",
+		"TITLE_EDIT": "Edit of Task",
+		"TITLE_NEW": "New Group Task",
+		"TOOLTIP_TASK": "Title of Task",
+		"TOOLTIP_DESCRIPTION": "Description of Task",
+		"TOOLTIP_DUEDATE": "Due Date of Task",
+		"TOOLTIP_COMPLETED": "Task completed"
+	},
+
 	"GROUP": {
 		"SEARCH_COLUMN_NAME": "Group",
 		"GROUP_LABEL_FILTER": "Name of group",
@@ -551,6 +571,7 @@
 		"TOOLTIP_ABBREVIATION": "Abbreviation of province",
 		"PLACE_HOLDER_NAME": "Name of province"
 	},
+	
 
 	"GROUP_PERMISSION": {
 		"SEARCH_COLUMN_NAME": "Group Permission",

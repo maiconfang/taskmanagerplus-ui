@@ -7,15 +7,15 @@
       <div class="form-group col form-group mb-3">
         <label class="requiredLabel">{{ 'USER.LABEL_NAME' | translate }}</label>
         <input id="user-name" type="text" class="form-control" formControlName="name" tooltip="{{ 'USER.LABEL_NAME' | translate }}">
-        <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'USER.LABEL_NAME' | translate }}">
-        </app-form-messages-erro>
+        <app-form-messages-error [control]="$any(form).controls['name']" label="{{ 'USER.LABEL_NAME' | translate }}">
+        </app-form-messages-error>
       </div>
 
       <div class="form-group col form-group mb-3">
         <label class="requiredLabel">{{ 'USER.LABEL_EMAIL' | translate }}</label>
         <input id="user-email" type="text" class="form-control" formControlName="email" tooltip="{{ 'USER.LABEL_EMAIL' | translate }}">
-        <app-form-messages-erro [control]="$any(form).controls['email']" label="{{ 'USER.LABEL_EMAIL' | translate }}">
-        </app-form-messages-erro>
+        <app-form-messages-error [control]="$any(form).controls['email']" label="{{ 'USER.LABEL_EMAIL' | translate }}">
+        </app-form-messages-error>
       </div>
 
     </div>
@@ -26,8 +26,8 @@
         <label class="requiredLabel" >{{ 'USER.LABEL_PASSWORD' | translate }}</label>
         <input id="user-password" type="password" class="form-control" formControlName="password"
           tooltip="{{ 'USER.LABEL_PASSWORD' | translate }}">
-        <app-form-messages-erro [control]="$any(form).controls['password']"
-          label="{{ 'USER.LABEL_PASSWORD' | translate }}"></app-form-messages-erro>
+        <app-form-messages-error [control]="$any(form).controls['password']"
+          label="{{ 'USER.LABEL_PASSWORD' | translate }}"></app-form-messages-error>
       </div>
 
     </div>
@@ -46,13 +46,13 @@
       <div class="form-group col">
         <label>Senha</label>
         <input type="password" class="form-control" formControlName="senha">
-        <app-form-messages-erro [control]="form.get(senha)" label="A senha"></app-form-messages-erro>
+        <app-form-messages-error [control]="form.get(senha)" label="A senha"></app-form-messages-error>
       </div>
 
       <div class="form-group col">
         <label>Confirma a senha</label>
         <input type="password" class="form-control" formControlName="confirmaSenha">
-        <app-form-messages-erro [control]="form.get('confirmaSenha')" label="A confirmação"></app-form-messages-erro>
+        <app-form-messages-error [control]="form.get('confirmaSenha')" label="A confirmação"></app-form-messages-error>
       </div>
       
     </div>

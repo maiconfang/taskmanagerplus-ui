@@ -9,9 +9,9 @@
                     <label class="requiredLabel">{{ 'PROVINCE.LABEL_NAME' | translate }}</label>
                     <input id="province-name" type="text" class="form-control" formControlName="name"
                         tooltip="{{ 'PROVINCE.LABEL_NAME' | translate }}">
-                    <app-form-messages-erro [control]="$any(form).controls['name']"
+                    <app-form-messages-error [control]="$any(form).controls['name']"
                         label="{{ 'PROVINCE.LABEL_NAME' | translate }}">
-                    </app-form-messages-erro>
+                    </app-form-messages-error>
                 </div>
             </div>
 
@@ -20,9 +20,9 @@
                     <label class="requiredLabel">{{ 'PROVINCE.LABEL_ABBREVIATION' | translate }}</label>
                     <input id="province-abbreviation" type="text" class="form-control" formControlName="abbreviation"
                         tooltip="{{ 'PROVINCE.LABEL_ABBREVIATION' | translate }}">
-                    <app-form-messages-erro [control]="$any(form).controls['abbreviation']"
+                    <app-form-messages-error [control]="$any(form).controls['abbreviation']"
                         label="{{ 'PROVINCE.LABEL_ABBREVIATION' | translate }}">
-                    </app-form-messages-erro>
+                    </app-form-messages-error>
                 </div>
             </div>
 

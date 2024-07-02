@@ -22,6 +22,12 @@ import { ProvinceService } from './province/province.service';
 import { ProvinceRegisterComponent } from './province/province-register/province-register.component';
 import { ProvinceSearchComponent } from './province/province-search/province-search.component';
 
+
+import { TaskModule } from './task/task.module';
+import { TaskService } from './task/task.service';
+import { TaskRegisterComponent } from './task/task-register/task-register.component';
+import { TaskSearchComponent } from './task/task-search/task-search.component';
+
 import { GroupModule } from './group/group.module';
 import { GroupService } from './group/group.service';
 import { GroupRegisterComponent } from './group/group-register/group-register.component';
@@ -46,6 +52,10 @@ const routesApp: Routes = [
       { path: 'province', component: ProvinceSearchComponent },
       { path: 'province/new', component: ProvinceRegisterComponent },
       { path: 'province/:id', component: ProvinceRegisterComponent },
+
+      { path: 'task', component: TaskSearchComponent },
+      { path: 'task/new', component: TaskRegisterComponent },
+      { path: 'task/:id', component: TaskRegisterComponent },
 
       { path: 'group', component: GroupSearchComponent },
       { path: 'group/new', component: GroupRegisterComponent },
@@ -78,6 +88,7 @@ const routesApp: Routes = [
     SharedModule,
     UserModule,
     ProvinceModule,
+    TaskModule,
     GroupModule,
     GroupPermissionModule,
   ],
@@ -87,6 +98,7 @@ const routesApp: Routes = [
   providers: [
     UserService,
     ProvinceService,
+    TaskService,
     GroupService,
     GroupPermissionService
   ]

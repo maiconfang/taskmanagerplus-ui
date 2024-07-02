@@ -457,11 +457,13 @@
 	},
 	"SIDE_BAR": {
 		"PROVINCE": "Estado",
+		"TASK": "Tarefa",
 		"GROUP": "Grupo",
 		"GROUP_PERMISSION": "Grupo Permissão",
 		"USER": "Usuário",
 		"SEE_POSTS": "Ver Registros",
 		"ADD_PROVINCE": "Adicionar Estado",
+		"ADD_TASK": "Adicionar Tarefa",
 		"ADD_GROUP": "Adicionar Grupo",
 		"ADD_GROUP_PERMISSION": "Adicionar Grupo Permissão",
 		"ADD_USER": "Adicionar Usuário"
@@ -509,7 +511,24 @@
 		"TITLE_EDIT": "Edição do Estado",
 		"TITLE_NEW": "Novo Estado",
 		"TOOLTIP_PROVINCE": "Nome do estado",
-		"TOOLTIP_abbreviation": "Sigla do estado"
+		"TOOLTIP_ABBREVIATION": "Sigla do estado"
+	},
+
+	"TASK": {
+		"SEARCH_COLUMN_TITLE": "Tarefa",
+		"SEARCH_COLUMN_DESCRIPTION": "Descricao da tarefa",
+		"TASK_LABEL_FILTER": "Nome da tarefa",
+		"LABEL_TITLE": "Nome da tarefa",
+		"LABEL_DESCRIPTION": "Descricao da tarefa",
+		"LABEL_DUEDATE": "Data de Vencimento da tarefa",
+		"LABEL_COMPLETED": "Tarefa Completada",
+		"TITLE_CONSULT": "Consultar Tarefa",
+		"TITLE_EDIT": "Edição do Tarefa",
+		"TITLE_NEW": "Nova Tarefa",
+		"TOOLTIP_TASK": "Nome da Tarefa",
+		"TOOLTIP_DESCRIPTION": "Descricao da Tarefa",
+		"TOOLTIP_DUEDATE": "Data de Vencimento da Tarefa",
+		"TOOLTIP_COMPLETED": "Tarefa Completada"
 	},
 
 	"GROUP": {

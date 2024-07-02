@@ -10,8 +10,8 @@
             <label class="requiredLabel">{{ 'GROUP.LABEL_NAME' | translate }}</label>
             <input id="group-name" type="text" class="form-control" formControlName="name"
               tooltip="{{ 'GROUP.LABEL_NAME' | translate }}">
-            <app-form-messages-erro [control]="$any(form).controls['name']" label="{{ 'GROUP.LABEL_NAME' | translate }}">
-            </app-form-messages-erro>
+            <app-form-messages-error [control]="$any(form).controls['name']" label="{{ 'GROUP.LABEL_NAME' | translate }}">
+            </app-form-messages-error>
           </div>
         </div>
       </div>

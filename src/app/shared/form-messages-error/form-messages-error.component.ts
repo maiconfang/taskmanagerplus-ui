@@ -4,11 +4,11 @@ import { FormControl } from '@angular/forms';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-form-messages-erro',
-  templateUrl: './form-messages-erro.component.html',
-  styleUrls: ['./form-messages-erro.component.scss']
+  selector: 'app-form-messages-error',
+  templateUrl: './form-messages-error.component.html',
+  styleUrls: ['./form-messages-error.component.scss']
 })
-export class FormMessagesErroComponent implements OnInit {
+export class FormMessagesErrorComponent implements OnInit {
 
   @Input() control: FormControl;
   @Input() label: string;
