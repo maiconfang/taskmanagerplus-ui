@@ -2,33 +2,31 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 .sidebar {
-  height: 100vh; /* Altura total da viewport */
-  width: 250px; /* Largura fixa do sidebar */
-  position: fixed; /* Fixa o sidebar à esquerda */
-  top: 0; /* Alinha o sidebar no topo */
-  left: 0; /* Alinha o sidebar na borda esquerda */
-  background-color: #343a40; /* Cor de fundo do sidebar */
-  padding-top: 20px; /* Espaço superior dentro do sidebar */
-  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  height: 100vh; /* Full viewport height */
+  width: 250px; /* Fixed sidebar width */
+  position: fixed; /* Fixes the sidebar to the left */
+  top: 0; /* Aligns the sidebar at the top */
+  left: 0; /* Aligns the sidebar to the left edge */
+  background-color: #343a40; /* Sidebar background color */
+  padding-top: 20px; /* Top padding inside the sidebar */
+  overflow-y: auto; /* Adds vertical scrolling if needed */
 }
 
 .sidebar .nav-link {
-  padding: 10px; /* Espaçamento interno dos itens de navegação */
-  font-size: 18px; /* Tamanho da fonte dos itens de navegação */
+  padding: 10px; /* Internal spacing for navigation items */
+  font-size: 18px; /* Font size for navigation items */
 }
 
 .sidebar button {
-  margin-top: auto; /* Coloca o botão no final do sidebar */
-  width: 100%; /* Ocupa toda a largura disponível do sidebar */
+  margin-top: auto; /* Places the button at the bottom of the sidebar */
+  width: 100%; /* Occupies the entire available width of the sidebar */
 }
 
-/* Responsividade */
+/* Responsiveness */
 @media (max-width: 992px) {
   .sidebar {
-    width: 100%; /* Altera a largura para ocupar toda a largura da tela em telas menores */
-    height: auto; /* Altura automática para se ajustar ao conteúdo */
-    position: relative; /* Altera para posição relativa para o layout responsivo */
+    width: 100%; /* Changes the width to occupy the entire screen width on smaller screens */
+    height: auto; /* Automatic height to adjust to content */
+    position: relative; /* Changes to relative positioning for responsive layout */
   }
 }
-
-

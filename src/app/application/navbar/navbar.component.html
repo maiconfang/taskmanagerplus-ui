@@ -1,18 +1,21 @@
 <div class="container-fluid p-0">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand"> {{ 'NAV_BAR.SYSTEM_NAME' | translate }}</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <nav id="navbar-main" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a id="navbar-brand" class="navbar-brand"> {{ 'NAV_BAR.SYSTEM_NAME' | translate }}</a>
+    <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" ><span>{{ userLogged }}</span></a>
+          <a id="nav-link-user" class="nav-link"><span>{{ userLogged }}</span></a>
         </li>
         <li class="nav-item">
-          <button class="btn btn-outline-light" href="#" (click)="logout()" type="button"> {{ 'NAV_BAR.LOGOUT' | translate }}</button>
+          <button id="btn-logout" class="btn btn-outline-light" href="#" (click)="logout()" type="button"> {{ 'NAV_BAR.LOGOUT' | translate }}</button>
         </li>
       </ul>
     </div>
   </nav>
+</div>
+
+

@@ -20,36 +20,8 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.toogleSubMenu();
   }
 
-  toogleSubMenu() {
-    const acc = document.querySelectorAll('.sidebar ul li a');
-    let last;
-
-    for (let i = 0; i < acc.length; i++) {
-
-      acc[i].addEventListener('click', function () {
-
-        if (last) {
-          if (!this.parentElement.parentElement.classList.contains('toogleSubMenu')) {
-            last.classList.toggle('toogleSubMenu');
-          }
-        }
-
-        if (this.nextElementSibling) {
-          if (this.nextElementSibling.nodeName === 'UL') {
-            this.nextElementSibling.classList.toggle('toogleSubMenu');
-            this.classList.toggle('activated');
-            last = this.nextElementSibling;
-          }
-        } else {
-          last.classList.toggle('toogleSubMenu');
-          last.classList.toggle('activated');
-        }
-
-      });
-    }
-  }
+  
 
 }
