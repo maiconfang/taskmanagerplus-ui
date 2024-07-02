@@ -1,57 +1,39 @@
-<div class="navbar-default navbar-inverse sidebar h-100">
+<!-- Sidebar and Content -->
+<div class="row no-gutters">
+  <!-- Sidebar -->
+  <div class="col-md-2 bg-dark text-light p-3" style="height: 100vh;">
+    <ul class="nav flex-column flex-grow-1">
 
-  <ul>
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/app/province">
+          <i class="bi bi-tags"></i> {{ 'SIDE_BAR.PROVINCE' | translate }}
+        </a>
+      </li>
 
-    <li>
-      <a aria-expanded="false" routerLink="/app/province">
-        <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.PROVINCE' | translate }}</span>
-        <i class="fas fa-angle-down"></i>
-      </a>
-      <ul aria-expanded="false">
-        <li><a routerLink="/app/province">{{ 'SIDE_BAR.SEE_POSTS' | translate }}</a></li>
-        <li><a routerLink="/app/province/new">{{ 'SIDE_BAR.ADD_PROVINCE' | translate }}</a></li>
-      </ul>
-    </li>
-
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/app/group">
+          <i class="bi bi-tags"></i> {{ 'SIDE_BAR.GROUP' | translate }}
+        </a>
+      </li>
 
 
-    <li>
-      <a aria-expanded="false" routerLink="/app/group">
-        <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.GROUP' | translate }}</span>
-        <i class="fas fa-angle-down"></i>
-      </a>
-      <ul aria-expanded="false">
-        <li><a routerLink="/app/group">{{ 'SIDE_BAR.SEE_POSTS' | translate }}</a></li>
-        <li><a routerLink="/app/group/new">{{ 'SIDE_BAR.ADD_GROUP' | translate }}</a></li>
-      </ul>
-    </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/app/group-permission">
+          <i class="bi bi-tags"></i> {{ 'SIDE_BAR.GROUP_PERMISSION' | translate }}
+        </a>
+      </li>
 
-    <li>
-      <a aria-expanded="false" routerLink="/app/group-permission">
-        <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.GROUP_PERMISSION' | translate }}</span>
-        <i class="fas fa-angle-down"></i>
-      </a>
-      <ul aria-expanded="false">
-        <li><a routerLink="/app/group-permission">{{ 'SIDE_BAR.SEE_POSTS' | translate }}</a></li>
-        <li><a routerLink="/app/group-permission/new">{{ 'SIDE_BAR.ADD_GROUP_PERMISSION' | translate }}</a></li>
-      </ul>
-    </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/app/user">
+          <i class="bi bi-tags"></i> {{ 'SIDE_BAR.USER' | translate }}
+        </a>
+      </li>
+    </ul>
 
-    <li>
-      <a aria-expanded="false" routerLink="/app/user">
-        <span><i class="fas fa-tags"></i> {{ 'SIDE_BAR.USER' | translate }}</span>
-        <i class="fas fa-angle-down"></i>
-      </a>
-      <ul aria-expanded="false">
-        <li><a routerLink="/app/user">{{ 'SIDE_BAR.SEE_POSTS' | translate }}</a></li>
-        <li><a routerLink="/app/user/new">{{ 'SIDE_BAR.ADD_USER' | translate }}</a></li>
-      </ul>
-    </li>
+  </div>
 
-    
-    
-    
-
-  </ul>
-
+  <!-- Content -->
+  <div class="col-md-10 p-4">
+    <!-- Conteúdo principal da aplicação -->
+  </div>
 </div>

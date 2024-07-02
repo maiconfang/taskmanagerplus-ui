@@ -1,99 +1,34 @@
-.sidebar {
-  width: 250px;
-  overflow-x: hidden;
-  transition: all 300ms;
-}
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 .sidebar {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  background-image: -webkit-linear-gradient(left, color-stop(#333333 10px), color-stop(#222222 10px));
-  background-image: linear-gradient(to right, #333333 10px, #5a0f0f 10px);
-  background-repeat: repeat-x;
+  height: 100vh; /* Altura total da viewport */
+  width: 250px; /* Largura fixa do sidebar */
+  position: fixed; /* Fixa o sidebar à esquerda */
+  top: 0; /* Alinha o sidebar no topo */
+  left: 0; /* Alinha o sidebar na borda esquerda */
+  background-color: #343a40; /* Cor de fundo do sidebar */
+  padding-top: 20px; /* Espaço superior dentro do sidebar */
+  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
 }
 
-.sidebar-search {
-  padding: 15px;
+.sidebar .nav-link {
+  padding: 10px; /* Espaçamento interno dos itens de navegação */
+  font-size: 18px; /* Tamanho da fonte dos itens de navegação */
 }
 
-.sidebar ul {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.sidebar button {
+  margin-top: auto; /* Coloca o botão no final do sidebar */
+  width: 100%; /* Ocupa toda a largura disponível do sidebar */
 }
 
-.sidebar ul a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  color: #ecebea;
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
-  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
-}
-
-.sidebar ul ul a {
-  padding: 10px 30px;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.sidebar-item-icon {
-  padding-right: 5px;
-}
-
-.sidebar ul ul a:hover,
-.sidebar ul ul a:focus,
-.sidebar ul ul a:active {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.sidebar ul a:hover,
-.sidebar ul a:focus,
-.sidebar ul a:active {
-  color: #fff;
-  text-decoration: none;
-}
-
-.sidebar a,
-.sidebar a:hover,
-.sidebar a:focus,
-.sidebar a:active {
-  outline: none;
-}
-
-.sidebar ul li ul {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 500ms;
-}
-
-/* .sidebar ul li a:hover + ul {
-  height: auto;
-} */
-
-.hideSidebar {
-  width: 0;
-  overflow-x: hidden;
-}
-
-.toogleSubMenu {
-  max-height: 600px !important;
-  overflow-x: hidden !important;
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 576px) {
-
+/* Responsividade */
+@media (max-width: 992px) {
   .sidebar {
-    background-color: aqua;
-    position: absolute;
-    z-index: 1;
+    width: 100%; /* Altera a largura para ocupar toda a largura da tela em telas menores */
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+    position: relative; /* Altera para posição relativa para o layout responsivo */
   }
-  
-  .sidebar-search {
-    display:none
-  }
-
 }
+
+
