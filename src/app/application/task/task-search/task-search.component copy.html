@@ -1,0 +1,78 @@
+<section class="container mt-5">
+    <h1 class="title-screen-search">{{ 'TASK.TITLE_CONSULT' | translate }}</h1>
+  
+    <form [formGroup]="form" (ngSubmit)="search()">
+
+      <!-- begin -->
+
+      <div class="row">
+        <div class="row justify-content-end mb-3">
+          <div class="col-md-6 d-flex justify-content-end">
+            <div class="input-group">
+              <input id="filter-task-title" type="text" class="form-control" tooltip="{{ 'TASK.TASK_LABEL_FILTER' | translate }}"
+                placeholder="{{ 'TASK.TASK_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2"
+                formControlName="title">
+              <div class="input-group-append">
+                <button id="filter-consult-task" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
+                  type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex justify-content-end">
+            <button id="filter-new-task" type="button" class="btn btn-primary"
+              tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/task/new">{{ 'CRUD.NEW' | translate }}
+            </button>
+          </div>
+        </div>
+
+      <!-- end -->
+  
+      <!-- <div class="justify-content-center">
+        <button id="filter-new-task" type="button" class="btn btn-primary"
+          tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/task/new">{{ 'CRUD.NEW' | translate}}
+        </button>
+      </div> -->
+  
+      <!-- <div class="input-group mb-3" style="margin-top: 8px;">
+        <input id="filter-task-title" type="text" class="form-control" tooltip="{{ 'TASK.TASK_LABEL_FILTER' | translate }}"
+          placeholder="{{ 'TASK.TASK_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2"
+          formControlName="title">
+        <div class="input-group-append">
+          <button id="filter-consult-task" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
+            type="submit"><i class="fas fa-search"></i></button>
+        </div>
+      </div> -->
+  
+      <div class="form-row">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+              <th scope="col">{{ 'TASK.SEARCH_COLUMN_TITLE' | translate }}</th>
+              <th scope="col">{{ 'TASK.SEARCH_COLUMN_DESCRIPTION' | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let entity of entities ">
+              <td>
+                <div class="column-action-crud-body" *ngIf="entity.id > 0">
+                  <a id="action-update-task" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
+                    [routerLink]="['/app/task', entity.id]"><i class="fa fa-edit"></i></a>
+                  <button id="action-remove-task" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" type="button"
+                    (click)="confirmRemoval(entity)" class="bottomless-button"><i
+                      class="far fa-trash-alt"></i></button>
+                </div>
+              </td>
+              <td id="column-task-title" tooltip="{{ 'TASK.LABEL_TITLE' | translate }}">{{ entity.title }}</td>
+              <td id="column-task-description" tooltip="{{ 'TASK.LABEL_DESCRIPTION' | translate }}">{{ entity.description }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <app-pagination-table [page]="page" (paginationEvent)=changePage($event) style="width: 100%">
+        </app-pagination-table>
+      </div>
+  
+    </form>
+  
+    <app-form-debug [form]="form"></app-form-debug>
+  </section>

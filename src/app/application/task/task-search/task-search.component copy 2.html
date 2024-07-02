@@ -31,18 +31,17 @@
         </thead>
         <tbody>
           <tr *ngFor="let entity of entities ">
-            <td id="column-task-title" tooltip="{{ 'TASK.LABEL_TITLE' | translate }}">{{ entity.title }}</td>
-            <td id="column-task-description" tooltip="{{ 'TASK.LABEL_DESCRIPTION' | translate }}">{{ entity.description }}</td>
             <td>
               <div class="column-action-crud-body" *ngIf="entity.id > 0">
                 <a id="action-update-task" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
-                  [routerLink]="['/app/task', entity.id]" style="padding-right: 20px;"><i class="fas fa-edit"></i></a>
-
-                <a id="action-remove-task" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" (click)="confirmRemoval(entity)">
-                  <i class="fas fa-trash"></i>
-                </a>
+                  [routerLink]="['/app/task', entity.id]"><i class="fa fa-edit"></i></a>
+                <button id="action-remove-task" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" type="button"
+                  (click)="confirmRemoval(entity)" class="bottomless-button"><i
+                    class="far fa-trash-alt"></i></button>
               </div>
             </td>
+            <td id="column-task-title" tooltip="{{ 'TASK.LABEL_TITLE' | translate }}">{{ entity.title }}</td>
+            <td id="column-task-description" tooltip="{{ 'TASK.LABEL_DESCRIPTION' | translate }}">{{ entity.description }}</td>
           </tr>
         </tbody>
       </table>
