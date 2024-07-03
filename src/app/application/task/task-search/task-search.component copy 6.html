@@ -1,0 +1,135 @@
+<section class="container mt-5">
+  <h1 class="title-screen-search">{{ 'TASK.TITLE_CONSULT' | translate }}</h1>
+
+  <form [formGroup]="form" (ngSubmit)="search()">
+
+    <!-- <div class="row mb-3">
+      <div class="col-md-8 d-flex justify-content-start">
+        <div class="input-group">
+          <input id="filter-task-title" type="text" class="form-control" tooltip="{{ 'TASK.SEARCH_COLUMN_TITLE' | translate }}"
+            placeholder="{{ 'TASK.SEARCH_COLUMN_TITLE' | translate }}" aria-describedby="basic-addon2"
+            formControlName="title">
+
+            <input id="filter-task-description" type="text" class="form-control" tooltip="{{ 'TASK.SEARCH_COLUMN_DESCRIPTION' | translate }}"
+            placeholder="{{ 'TASK.SEARCH_COLUMN_DESCRIPTION' | translate }}" aria-describedby="basic-addon2"
+            formControlName="description">
+
+            <input id="filter-task-duedate" type="text" class="form-control" tooltip="{{ 'TASK.SEARCH_COLUMN_DUEDATE' | translate }}"
+            placeholder="{{ 'TASK.SEARCH_COLUMN_DUEDATE' | translate }}" aria-describedby="basic-addon2"
+            formControlName="dueDate">
+
+            <input id="filter-task-duedate" type="text" class="form-control" tooltip="{{ 'TASK.SEARCH_COLUMN_COMPLETED' | translate }}"
+            placeholder="{{ 'TASK.SEARCH_COLUMN_COMPLETED' | translate }}" aria-describedby="basic-addon2"
+            formControlName="completed">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">{{ 'CRUD.TOOLTIP_FILTER' | translate }}</button>
+        </div>
+      </div>
+
+      
+      
+      <div class="col-md-4 d-flex justify-content-end">
+        <button id="filter-new-task" type="button" class="btn btn-primary"
+          tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/task/new">{{ 'CRUD.NEW' | translate }}
+        </button>
+      </div>
+    </div> -->
+
+    <!-- begin -->
+    <div class="container">
+      <form [formGroup]="form">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group mb-2">
+              <!-- <label for="title">{{ 'TASK.LABEL_TITLE' | translate }}</label> -->
+              <input id="title" placeholder="{{ 'TASK.SEARCH_COLUMN_TITLE' | translate }}" class="form-control" formControlName="title">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group mb-2">
+              <!-- <label for="description">{{ 'TASK.LABEL_DESCRIPTION' | translate }}</label> -->
+              <input id="description" placeholder="{{ 'TASK.SEARCH_COLUMN_DESCRIPTION' | translate }}" class="form-control" formControlName="description">
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-end mb-3">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <!-- <label for="dueDate">{{ 'TASK.LABEL_DUEDATE' | translate }}</label> -->
+                  <input id="dueDate" placeholder="{{ 'TASK.SEARCH_COLUMN_DUEDATE' | translate }}" type="date" class="form-control" formControlName="dueDate">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <ng-select
+                    id="completed"
+                    [items]="[
+                      {value: true, label: ('TASK.YES' | translate)},
+                      {value: false, label: ('TASK.NO' | translate)}
+                    ]"
+                    bindLabel="label"
+                    bindValue="value"
+                    placeholder="{{ 'TASK.SEARCH_COLUMN_COMPLETED' | translate }}"
+                    formControlName="completed">
+                  </ng-select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 text-right">
+            <button type="submit" class="btn btn-outline-secondary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}">
+              {{ 'CRUD.TOOLTIP_FILTER' | translate }}
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    
+    <!-- end -->
+
+
+
+
+    
+
+    <div class="form-row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">{{ 'TASK.SEARCH_COLUMN_TITLE' | translate }}</th>
+            <th scope="col">{{ 'TASK.LABEL_DESCRIPTION' | translate }}</th>
+            <th scope="col">{{ 'TASK.LABEL_DUEDATE' | translate }}</th>
+            <th scope="col">{{ 'TASK.LABEL_COMPLETED' | translate }}</th>
+            <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entity of entities ">
+            <td id="column-task-title" tooltip="{{ 'TASK.LABEL_TITLE' | translate }}">{{ entity.title }}</td>
+            <td id="column-task-description" tooltip="{{ 'TASK.LABEL_DESCRIPTION' | translate }}">{{ entity.description }}</td>
+            <td id="column-task-duedate" tooltip="{{ 'TASK.LABEL_DUEDATE' | translate }}">{{ entity.dueDate | date:'yyyy-MM-dd' }}</td>
+            <td id="column-task-completed" tooltip="{{ 'TASK.LABEL_COMPLETED' | translate }}">{{ entity.completed ? ('TASK.YES' | translate) : ('TASK.NO' | translate) }}</td>
+            <td>
+              <div class="column-action-crud-body" *ngIf="entity.id > 0">
+                <a id="action-update-task" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
+                  [routerLink]="['/app/task', entity.id]" style="padding-right: 20px;"><i class="fas fa-edit"></i></a>
+
+                <a id="action-remove-task" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" (click)="confirmRemoval(entity)">
+                  <i class="fas fa-trash"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <app-pagination-table [page]="page" (paginationEvent)=changePage($event) style="width: 100%">
+      </app-pagination-table>
+    </div>
+
+  </form>
+
+  <app-form-debug [form]="form"></app-form-debug>
+</section>

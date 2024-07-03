@@ -1,0 +1,56 @@
+<section class="container mt-5">
+  <h1 class="title-screen-search">{{ 'TASK.TITLE_CONSULT' | translate }}</h1>
+
+  <form [formGroup]="form" (ngSubmit)="search()">
+
+    <div class="row mb-3">
+      <div class="col-md-8 d-flex justify-content-start">
+        <div class="input-group">
+          <input id="filter-task-title" type="text" class="form-control" tooltip="{{ 'TASK.TASK_LABEL_FILTER' | translate }}"
+            placeholder="{{ 'TASK.TASK_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2"
+            formControlName="title">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">{{ 'CRUD.TOOLTIP_FILTER' | translate }}</button>
+        </div>
+      </div>
+      
+      <div class="col-md-4 d-flex justify-content-end">
+        <button id="filter-new-task" type="button" class="btn btn-primary"
+          tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/task/new">{{ 'CRUD.NEW' | translate }}
+        </button>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
+            <th scope="col">{{ 'TASK.SEARCH_COLUMN_TITLE' | translate }}</th>
+            <th scope="col">{{ 'TASK.SEARCH_COLUMN_DESCRIPTION' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entity of entities ">
+            <td id="column-task-title" tooltip="{{ 'TASK.LABEL_TITLE' | translate }}">{{ entity.title }}</td>
+            <td id="column-task-description" tooltip="{{ 'TASK.LABEL_DESCRIPTION' | translate }}">{{ entity.description }}</td>
+            <td>
+              <div class="column-action-crud-body" *ngIf="entity.id > 0">
+                <a id="action-update-task" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
+                  [routerLink]="['/app/task', entity.id]" style="padding-right: 20px;"><i class="fas fa-edit"></i></a>
+
+                <a id="action-remove-task" tooltip="{{ 'CRUD.ACTION_REMOVE' | translate }}" (click)="confirmRemoval(entity)">
+                  <i class="fas fa-trash"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <app-pagination-table [page]="page" (paginationEvent)=changePage($event) style="width: 100%">
+      </app-pagination-table>
+    </div>
+
+  </form>
+
+  <app-form-debug [form]="form"></app-form-debug>
+</section>

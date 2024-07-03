@@ -516,19 +516,22 @@
 
 	"TASK": {
 		"SEARCH_COLUMN_TITLE": "Tarefa",
-		"SEARCH_COLUMN_DESCRIPTION": "Descricao da tarefa",
+		"SEARCH_COLUMN_DESCRIPTION": "descrição da tarefa",
+		"SEARCH_COLUMN_DUEDATE": "Data de Vencimento",
 		"TASK_LABEL_FILTER": "Nome da tarefa",
 		"LABEL_TITLE": "Nome da tarefa",
-		"LABEL_DESCRIPTION": "Descricao da tarefa",
+		"LABEL_DESCRIPTION": "descrição da tarefa",
 		"LABEL_DUEDATE": "Data de Vencimento da tarefa",
 		"LABEL_COMPLETED": "Tarefa Completada",
 		"TITLE_CONSULT": "Consultar Tarefa",
 		"TITLE_EDIT": "Edição do Tarefa",
 		"TITLE_NEW": "Nova Tarefa",
 		"TOOLTIP_TASK": "Nome da Tarefa",
-		"TOOLTIP_DESCRIPTION": "Descricao da Tarefa",
+		"TOOLTIP_DESCRIPTION": "Descrição da Tarefa",
 		"TOOLTIP_DUEDATE": "Data de Vencimento da Tarefa",
-		"TOOLTIP_COMPLETED": "Tarefa Completada"
+		"TOOLTIP_COMPLETED": "Tarefa Completada",
+		"YES": "Sim",
+    	"NO": "Não"
 	},
 
 	"GROUP": {

@@ -11,6 +11,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
+import { NgSelectModule } from '@ng-select/ng-select';
+
 @NgModule({
   declarations: [TaskRegisterComponent, TaskSearchComponent],
   imports: [
@@ -19,7 +21,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     PaginationTableModule,
     TabsModule.forRoot(),
     TooltipModule.forRoot(),
-    AccordionModule.forRoot()
+    AccordionModule.forRoot(),
+    NgSelectModule,
   ],
   exports: [TaskRegisterComponent, TaskSearchComponent]
 })

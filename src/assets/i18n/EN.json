@@ -515,7 +515,9 @@
 
 	"TASK": {
 		"SEARCH_COLUMN_TITLE": "Task",
-		"SEARCH_COLUMN_DESCRIPTION": "Description of task",
+		"SEARCH_COLUMN_DESCRIPTION": "Description",
+		"SEARCH_COLUMN_DUEDATE": "Due Date",
+		"SEARCH_COLUMN_COMPLETED": "Select Completion Status",
 		"TASK_LABEL_FILTER": "Title",
 		"LABEL_TITLE": "Title",
 		"LABEL_DESCRIPTION": "Description",
@@ -524,10 +526,12 @@
 		"TITLE_CONSULT": "Consult Task",
 		"TITLE_EDIT": "Edit of Task",
 		"TITLE_NEW": "New Task",
-		"TOOLTIP_TASK": "Title of Task",
-		"TOOLTIP_DESCRIPTION": "Description of Task",
-		"TOOLTIP_DUEDATE": "Due Date of Task",
-		"TOOLTIP_COMPLETED": "Task completed"
+		"TOOLTIP_TASK": "Title",
+		"TOOLTIP_DESCRIPTION": "Description",
+		"TOOLTIP_DUEDATE": "Due Date",
+		"TOOLTIP_COMPLETED": "Task Completed",
+		"YES": "Yes",
+    	"NO": "No"
 	},
 
 	"GROUP": {

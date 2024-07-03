@@ -28,7 +28,10 @@ export class TaskSearchComponent extends CrudSearchImpl implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      title: ['', [Validators.maxLength(100)]]
+      title: ['', [Validators.maxLength(100)]],
+      description: ['', [Validators.maxLength(200)]],
+      dueDate: [''],
+      completed: ['']
     });
 
     this.search();
@@ -43,6 +46,10 @@ export class TaskSearchComponent extends CrudSearchImpl implements OnInit {
   }
 
   search(paginator = 0) {
+
+    console.log('Search method called with paginator:', paginator);
+    console.log('Form value:', this.form.value); // Log the form value
+    
     this.service.listPaginated(this.form.value, paginator)
       .subscribe(data => {
         this.page = data.page;
@@ -52,5 +59,6 @@ export class TaskSearchComponent extends CrudSearchImpl implements OnInit {
           this.entities = [{}]
       });
   }
+
 
 }
