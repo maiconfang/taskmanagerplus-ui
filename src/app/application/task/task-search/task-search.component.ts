@@ -31,7 +31,8 @@ export class TaskSearchComponent extends CrudSearchImpl implements OnInit {
       title: ['', [Validators.maxLength(100)]],
       description: ['', [Validators.maxLength(200)]],
       dueDate: [''],
-      completed: ['']
+      completed: [null],     // Completed checkbox
+      notCompleted: [null]   // Not Completed checkbox
     });
 
     this.search();
@@ -47,10 +48,9 @@ export class TaskSearchComponent extends CrudSearchImpl implements OnInit {
 
   search(paginator = 0) {
 
-    console.log('Search method called with paginator:', paginator);
-    console.log('Form value:', this.form.value); // Log the form value
-    
-    this.service.listPaginated(this.form.value, paginator)
+    const query = this.buildQuery(this.form.value);
+
+    this.service.listPaginated(query, paginator)
       .subscribe(data => {
         this.page = data.page;
         if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
@@ -58,6 +58,27 @@ export class TaskSearchComponent extends CrudSearchImpl implements OnInit {
         } else
           this.entities = [{}]
       });
+  }
+
+  private buildQuery(formValue: any) {
+    let query: any = {
+      title: formValue.title,
+      description: formValue.description,
+      dueDate: formValue.dueDate
+    };
+
+    const { completed, notCompleted } = formValue;
+
+    if (completed && !notCompleted) {
+      query['completed'] = true;
+    } else if (!completed && notCompleted) {
+      query['completed'] = false;
+    } else {
+      // If both or none are selected, do not filter by completion status
+      query['completed'] = null;
+    }
+
+    return query;
   }
 
 

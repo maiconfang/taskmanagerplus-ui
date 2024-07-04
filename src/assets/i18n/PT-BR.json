@@ -523,6 +523,7 @@
 		"LABEL_DESCRIPTION": "descrição da tarefa",
 		"LABEL_DUEDATE": "Data de Vencimento da tarefa",
 		"LABEL_COMPLETED": "Tarefa Completada",
+		"LABEL_NOT_COMPLETED": "Não Completada",
 		"TITLE_CONSULT": "Consultar Tarefa",
 		"TITLE_EDIT": "Edição do Tarefa",
 		"TITLE_NEW": "Nova Tarefa",

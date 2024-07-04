@@ -10,14 +10,14 @@
     <div class="col-md-6 d-flex justify-content-end">
       <div class="form-group mb-2 text-right">
         <button id="btn-create-record" tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" 
-                type="button" class="btn btn-primary" routerLink="/app/task/new">
+                type="button" class="btn btn-outline-primary" routerLink="/app/task/new">
           {{ 'CRUD.NEW' | translate }}
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Formulário de pesquisa -->
+  <!-- Search Form -->
   <form [formGroup]="form" (ngSubmit)="search()">
   <div class="row mb-3">
     <div class="col-md-6">
@@ -39,24 +39,31 @@
             <input type="text" placeholder="{{ 'TASK.SEARCH_COLUMN_DUEDATE' | translate }}"
                     class="form-control"
                     formControlName="dueDate"
+                    pattern="\d{4}-\d{2}-\d{2}"
                     bsDatepicker
                     [bsConfig]="{ dateInputFormat: 'YYYY/MM/DD' }">
           </div>
         </div>
         <div class="col-md-6">
-          <div class="input-group-text"> 
-            <input class="form-check-input" id="ckbx1" 
-                   type="checkbox" value="" formControlName="completed"> 
-            <label for="ckbx1" class="d-block mx-2"> 
-              {{ 'TASK.LABEL_COMPLETED' | translate }} ? 
+          <div class="input-group-text">
+            <input class="form-check-input" id="completed" 
+                   type="checkbox" formControlName="completed"> 
+            <label for="completed" class="d-block mx-2"> 
+              {{ 'TASK.LABEL_COMPLETED' | translate }}
             </label> 
-          </div> 
+            <input class="form-check-input" id="not_completed" 
+                   type="checkbox" formControlName="notCompleted"> 
+            <label for="not_completed" class="d-block mx-2"> 
+              {{ 'TASK.LABEL_NOT_COMPLETED' | translate }} 
+            </label> 
+          </div>
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group mb-2">
-        <button id="btn-consult-records" type="button" class="btn btn-outline-secondary" 
+        <!-- btn btn-outline-secondary -->
+        <button id="btn-consult-records" type="button" class="btn btn-secondary" 
                 tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}" (click)="search()">
           {{ 'CRUD.TOOLTIP_FILTER' | translate }}
         </button>
@@ -81,7 +88,10 @@
           <td id="column-task-title" tooltip="{{ 'TASK.LABEL_TITLE' | translate }}">{{ entity.title }}</td>
           <td id="column-task-description" tooltip="{{ 'TASK.LABEL_DESCRIPTION' | translate }}">{{ entity.description }}</td>
           <td id="column-task-duedate" tooltip="{{ 'TASK.LABEL_DUEDATE' | translate }}">{{ entity.dueDate | date:'yyyy-MM-dd' }}</td>
-          <td id="column-task-completed" tooltip="{{ 'TASK.LABEL_COMPLETED' | translate }}">{{ entity.completed ? ('TASK.YES' | translate) : ('TASK.NO' | translate) }}</td>
+          <td id="column-task-completed" tooltip="{{ 'TASK.LABEL_COMPLETED' | translate }}">
+            {{ entity.completed !== undefined && entity.completed !== null ? (entity.completed ? ('TASK.YES' | translate) : ('TASK.NO' | translate)) : '' }}
+          </td>
+          
           <td>
             <div class="column-action-crud-body" *ngIf="entity.id > 0">
               <a id="action-update-task" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"

@@ -484,9 +484,9 @@
 		"MSG_CONFIRM_REMOVE": "Do you really want to delete ",
 		"MSG_CONFIRM_REMOVE_YES": "Yes",
 		"MSG_CONFIRM_REMOVE_NO": "No",
-		"MSG_SUCCESS_REMOVE": "Successfully removed",
-		"MSG_SUCCESS_CREATED": "Successfully created",
-		"MSG_SUCCESS_UPDATED": "Successfully updated"
+		"MSG_SUCCESS_REMOVE": "Successfully Removed",
+		"MSG_SUCCESS_CREATED": "Successfully Created",
+		"MSG_SUCCESS_UPDATED": "Successfully Updated"
 	},
 
 	"USER": {
@@ -517,12 +517,12 @@
 		"SEARCH_COLUMN_TITLE": "Task",
 		"SEARCH_COLUMN_DESCRIPTION": "Description",
 		"SEARCH_COLUMN_DUEDATE": "Due Date",
-		"SEARCH_COLUMN_COMPLETED": "Select Completion Status",
 		"TASK_LABEL_FILTER": "Title",
 		"LABEL_TITLE": "Title",
 		"LABEL_DESCRIPTION": "Description",
 		"LABEL_DUEDATE": "Due Date",
 		"LABEL_COMPLETED": "Completed",
+		"LABEL_NOT_COMPLETED": "Not Completed",
 		"TITLE_CONSULT": "Consult Task",
 		"TITLE_EDIT": "Edit of Task",
 		"TITLE_NEW": "New Task",
