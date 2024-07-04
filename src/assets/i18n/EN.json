@@ -477,10 +477,10 @@
 		"ACTION_UPDATE": "Update",
 		"ACTION_REMOVE": "Remove",
 		"TOOLTIP_FILTER": "Consult Records",
-		"TOOLTIP_CREATE_NEW": "Create new record",
-		"TOOLTIP_SAVE": "Save record",
+		"TOOLTIP_CREATE_NEW": "Create New Record",
+		"TOOLTIP_SAVE": "Save Record",
 		"TOOLTIP_BACK": "Back to Search",
-		"TOOLTIP_ERASER": "Eraser fields",
+		"TOOLTIP_ERASER": "Eraser Fields",
 		"MSG_CONFIRM_REMOVE": "Do you really want to delete ",
 		"MSG_CONFIRM_REMOVE_YES": "Yes",
 		"MSG_CONFIRM_REMOVE_NO": "No",
@@ -492,25 +492,25 @@
 	"USER": {
 		"SEARCH_COLUMN_NAME": "User",
 		"SEARCH_COLUMN_EMAIL": "Login / E-mail",
-		"USER_LABEL_FILTER": "Name of user",
-		"LABEL_NAME": "Name of user",
-		"LABEL_EMAIL": "E-mail of user",
-		"LABEL_PASSWORD": "Password of user",
+		"USER_LABEL_FILTER": "User",
+		"LABEL_NAME": "User",
+		"LABEL_EMAIL": "E-mail",
+		"LABEL_PASSWORD": "Password",
 		"TITLE_CONSULT": "Consult User",
 		"TITLE_EDIT": "Edit of User",
 		"TITLE_NEW": "New User"
 	},
 	"PROVINCE": {
 		"SEARCH_COLUMN_NAME": "Province",
-		"SEARCH_COLUMN_ABBREVIATION": "Abbreviation of Province",
-		"PROVINCE_LABEL_FILTER": "Name of province",
+		"SEARCH_COLUMN_ABBREVIATION": "Abbreviation",
+		"PROVINCE_LABEL_FILTER": "Province",
 		"LABEL_NAME": "Province",
 		"LABEL_ABBREVIATION": "Abbreviation",
 		"TITLE_CONSULT": "Consult Province",
 		"TITLE_EDIT": "Edit of Province",
 		"TITLE_NEW": "New Province",
 		"TOOLTIP_PROVINCE": "Name of Province",
-		"TOOLTIP_ABBREVIATION": "Abbreviation of Province"
+		"TOOLTIP_ABBREVIATION": "Abbreviation"
 	},
 
 	"TASK": {
@@ -536,12 +536,12 @@
 
 	"GROUP": {
 		"SEARCH_COLUMN_NAME": "Group",
-		"GROUP_LABEL_FILTER": "Name of group",
-		"LABEL_NAME": "Name of group",
+		"GROUP_LABEL_FILTER": "Group",
+		"LABEL_NAME": "Group",
 		"TITLE_CONSULT": "Consult Group",
 		"TITLE_EDIT": "Edit of Group",
 		"TITLE_NEW": "New Group",
-		"TOOLTIP_GROUP": "Name of group"
+		"TOOLTIP_GROUP": "Group"
 	},
 
 	"PAGINATOR": {

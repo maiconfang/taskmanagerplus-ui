@@ -1,19 +1,28 @@
 <section class="container mt-5">
-    <h1 class="title-screen-search">{{ 'GROUP_PERMISSION.TITLE_CONSULT' | translate }}</h1>
+
+    <!-- Consult Group Permission e Create Record -->
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="form-group mb-2">
+                <h1 class="title-screen-search">{{ 'GROUP_PERMISSION.TITLE_CONSULT' | translate }}</h1>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end">
+            <div class="form-group mb-2 text-right">
+                <button id="btn-create-record" tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" type="button"
+                    class="btn btn-outline-primary" routerLink="/app/group-permission/new">
+                    {{ 'CRUD.NEW' | translate }}
+                </button>
+            </div>
+        </div>
+    </div>
 
     <form [formGroup]="form" (ngSubmit)="search()">
 
-        <div class="justify-content-center">
-            <button id="filter-new-model" type="button" class="btn btn-primary"
-                tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/group-permission/new">{{
-                'CRUD.NEW' | translate
-                }}</button>
-        </div>
-
-        <!-- testes ini-->
+        <!-- test ini-->
         <div class="input-group mb-3" style="margin-top: 8px;">
             <select class="form-select" id="group" formControlName="id">
-                <option selected>Selecione um grupo</option>
+                <option selected>Select a Group</option>
                 <option *ngFor="let grupo of groupss" [value]="grupo.id">{{grupo.name}}</option>
             </select>
             <div class="input-group-append">
@@ -22,7 +31,7 @@
                         class="fas fa-search"></i></button>
             </div>
         </div>
-        <!-- teste end-->
+        <!-- test end-->
 
         <div class="form-row">
             <table class="table table-striped">

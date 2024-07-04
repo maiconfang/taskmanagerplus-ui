@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-              <div class="form-row mb-3">
+            <div class="form-row mb-3">
                 <div class="form-group col">
                     <label class="requiredLabel">{{ 'TASK.LABEL_DUEDATE' | translate }}</label>
                     <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
@@ -41,7 +41,7 @@
                       </div>
                 </div>
 
-              </div>
+            </div>
 
             <div class="form-check mb-4">
                 <input class="form-check-input" type="checkbox" id="task-completed" formControlName="completed">
@@ -56,17 +56,20 @@
 
 
         <div class="row">
-            <div class="col-md-2 d-flex justify-content-start">
-                <button id="btn-back" type="button" class="btn btn-secondary w-100"
-                 tooltip="{{ 'CRUD.TOOLTIP_BACK' | translate }}" routerLink="/app/task">       {{ 'CRUD.BACK' | translate }}
-                </button>
-            </div>
+
             <div class="col-md-2 d-flex justify-content-start">
                 <button id="btn-save-task" type="submit" class="btn btn-primary w-100"
                         tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}" [disabled]="form.invalid">  {{ 'CRUD.SAVE' | translate }}
                 </button>
             </div>
-          </div>
+            
+            <div class="col-md-2 d-flex justify-content-start">
+                <button id="btn-back" type="button" class="btn btn-secondary w-100"
+                 tooltip="{{ 'CRUD.TOOLTIP_BACK' | translate }}" routerLink="/app/task">       {{ 'CRUD.BACK' | translate }}
+                </button>
+            </div>
+
+        </div>
           
           
 

@@ -3,8 +3,7 @@
   
     <form [formGroup]="form" (ngSubmit)="save()">
   
-      <div>
-        <div class="form-row">
+        <div class="form-row mb-3">
   
           <div class="form-group col">
             <label class="requiredLabel">{{ 'GROUP.LABEL_NAME' | translate }}</label>
@@ -14,14 +13,22 @@
             </app-form-messages-error>
           </div>
         </div>
-      </div>
   
-      <div class="buttons-crud-content">
-        <button id="btn-save-group" type="submit" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}"
-          [disabled]="form.invalid">{{ 'CRUD.SAVE' | translate }}</button>
-        <button id="btn-back" type="button" class="btn btn-secondary" tooltip="{{ 'CRUD.TOOLTIP_BACK' | translate }}"
-          routerLink="/app/group">{{ 'CRUD.BACK' | translate }}</button>
-      </div>
+      <div class="row">
+
+        <div class="col-md-2 d-flex justify-content-start">
+            <button id="btn-save-group" type="submit" class="btn btn-primary w-100"
+                    tooltip="{{ 'CRUD.TOOLTIP_SAVE' | translate }}" [disabled]="form.invalid">  {{ 'CRUD.SAVE' | translate }}
+            </button>
+        </div>
+        
+        <div class="col-md-2 d-flex justify-content-start">
+            <button id="btn-back" type="button" class="btn btn-secondary w-100"
+             tooltip="{{ 'CRUD.TOOLTIP_BACK' | translate }}" routerLink="/app/group">  {{ 'CRUD.BACK' | translate }}
+            </button>
+        </div>
+
+    </div>
   
   
     </form>

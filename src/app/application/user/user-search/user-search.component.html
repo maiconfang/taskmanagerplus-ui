@@ -1,21 +1,39 @@
 <section class="container mt-5">
-  <h1 class="title-screen-search">{{ 'USER.TITLE_CONSULT' | translate }}</h1>
+
+  <!-- Consult User e Create Record -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <div class="form-group mb-2">
+        <h1 class="title-screen-search">{{ 'USER.TITLE_CONSULT' | translate }}</h1>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex justify-content-end">
+      <div class="form-group mb-2 text-right">
+        <button id="btn-create-record" tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" type="button"
+          class="btn btn-outline-primary" routerLink="/app/user/new">
+          {{ 'CRUD.NEW' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
 
   <form [formGroup]="form" (ngSubmit)="search()">
 
-    <div class="justify-content-center">
-      <button id="filter-new-user" type="button" class="btn btn-primary"
-        tooltip="{{ 'CRUD.TOOLTIP_CREATE_NEW' | translate }}" routerLink="/app/user/new">{{ 'CRUD.NEW' | translate
-        }}</button>
-    </div>
 
-    <div class="input-group mb-3" style="margin-top: 8px;">
-      <input id="filter-user-name" type="text" class="form-control"
-        placeholder="{{ 'USER.USER_LABEL_FILTER' | translate }}" aria-describedby="basic-addon2"
-        formControlName="name">
-      <div class="input-group-append">
-        <button id="filter-consult-user" class="btn btn-primary" tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}"
-          type="submit"><i class="fas fa-search"></i></button>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <div class="form-group mb-2">
+          <input id="name" placeholder="{{ 'USER.USER_LABEL_FILTER' | translate }}" class="form-control"
+            formControlName="name">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group mb-2">
+          <button id="btn-consult-records" type="button" class="btn btn-secondary"
+            tooltip="{{ 'CRUD.TOOLTIP_FILTER' | translate }}" (click)="search()">
+            {{ 'CRUD.TOOLTIP_FILTER' | translate }}
+          </button>
+        </div>
       </div>
     </div>
 
@@ -23,21 +41,25 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
             <th scope="col">{{ 'USER.SEARCH_COLUMN_NAME' | translate }}</th>
             <th scope="col">{{ 'USER.SEARCH_COLUMN_EMAIL' | translate }}</th>
+            <th scope="col" class="column-action-crud-header">{{ 'CRUD.ACTION' | translate }}</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let entity of entities ">
+
+            <td id="column-user-name" tooltip="{{ 'USER.LABEL_NAME' | translate }}">{{ entity.name }}</td>
+            <td id="column-user-email" tooltip="{{ 'USER.LABEL_EMAIL' | translate }}">{{ entity.email }}</td>
+
             <td>
               <div class="column-action-crud-body" *ngIf="entity.id > 0">
                 <a id="action-update-user" tooltip="{{ 'CRUD.ACTION_UPDATE' | translate }}"
-                  [routerLink]="['/app/user', entity.id]"><i class="fa fa-edit"></i></a>
+                  [routerLink]="['/app/user', entity.id]" style="padding-right: 20px;"><i class="fas fa-edit"></i></a>
+
               </div>
             </td>
-            <td id="column-user-name" tooltip="{{ 'USER.LABEL_NAME' | translate }}">{{ entity.name }}</td>
-            <td id="column-user-email" tooltip="{{ 'USER.LABEL_EMAIL' | translate }}">{{ entity.email }}</td>
+
           </tr>
         </tbody>
       </table>
