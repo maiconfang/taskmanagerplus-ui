@@ -15,7 +15,7 @@
       <div class="form-group mb-3">
         <div class="input-group">
           <span class="input-group-text"><i class="fas fa-user"></i></span>
-          <input id="login_login" type="text" class="form-control" formControlName="login" placeholder="{{ 'LOGIN.LBL_LOGIN' | translate }}" >
+          <input id="login_username" type="text" class="form-control" formControlName="login" placeholder="{{ 'LOGIN.LBL_LOGIN' | translate }}" >
         </div>
         <app-form-messages-error [control]="$any(form).controls['login']" label="{{ 'LOGIN.REQUIRED_LOGIN' | translate }}"></app-form-messages-error>
       </div>
@@ -28,7 +28,7 @@
         <app-form-messages-error [control]="$any(form).controls['pass']" label="{{ 'LOGIN.REQUIRED_PASSWORD' | translate }}"></app-form-messages-error>
       </div>
 
-      <button id="login_btn_enter" type="submit" class="btn btn-primary btn-lg btn-block m-0" [disabled]="form.invalid">{{ 'LOGIN.ENTER' | translate }}</button>
+      <button id="login_submit" type="submit" class="btn btn-primary btn-lg btn-block m-0" [disabled]="form.invalid">{{ 'LOGIN.ENTER' | translate }}</button>
 
       <div class="d-flex align-items-center justify-content-between mt-3">
 

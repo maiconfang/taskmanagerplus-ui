@@ -35,8 +35,10 @@ export class LoginComponent implements OnInit {
   createForm() {
     
     this.form = this.fb.group({
-      "login": ['luna.moon@maif.com', Validators.required],
-      "pass": ['123', [Validators.required, Validators.minLength(2)]],
+      // "login": ['luna.moon@maif.com', Validators.required],
+      // "pass": ['123', [Validators.required, Validators.minLength(2)]],
+      "login": ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]],
+      "pass": ['', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
     });
   }
 

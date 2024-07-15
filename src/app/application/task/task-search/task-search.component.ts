@@ -56,7 +56,7 @@ export class TaskSearchComponent extends CrudSearchImpl implements OnInit {
         if (data.page.totalElements > 0 && typeof data._embedded !== 'undefined') {
           this.entities = data._embedded.tasks
         } else
-          this.entities = [{}]
+        this.entities = [{}]
       });
   }
 

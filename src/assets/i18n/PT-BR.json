@@ -432,7 +432,7 @@
 		"CONTACT_DESCRIPTION_1.3": "https://github.com/maiconfang"
 	},
 	"LOGIN": {
-		"ACCESS_SYSTEM": "Entrar no Sistema",
+		"ACCESS_SYSTEM": "Gerenciador de Tarefas Plus",
 		"LBL_LOGIN": "Login",
 		"LBL_PASSWORD": "Senha",
 		"REQUIRED_LOGIN": "O login",
@@ -532,7 +532,8 @@
 		"TOOLTIP_DUEDATE": "Data de Vencimento da Tarefa",
 		"TOOLTIP_COMPLETED": "Tarefa Completada",
 		"YES": "Sim",
-    	"NO": "Não"
+    	"NO": "Não",
+		"NO_CONTENT": "Nenhum registro encontrado"
 	},
 
 	"GROUP": {

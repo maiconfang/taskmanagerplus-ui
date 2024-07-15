@@ -1,27 +1,28 @@
+<!-- pagination-table.component.html -->
 <div class="pagination-container" *ngIf="page && page.totalPages > 0">
   <nav aria-label="Page navigation">
     <ul class="pagination">
 
       <li tooltip="{{ back }}" class="page-item" [ngClass]="page.first ? 'disabled' : '' ">
-        <a class="page-link" *ngIf="page.first" aria-label="Previous">
+        <a id="pagination-previous" class="page-link" *ngIf="page.first" aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
         </a>
-        <a class="page-link" style="cursor: pointer" *ngIf="!page.first" (click)="changePage(page.number-1)"
+        <a id="pagination-previous-active" class="page-link" style="cursor: pointer" *ngIf="!page.first" (click)="changePage(page.number-1)"
           aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
         </a>
       </li>
 
-      <li class="page-item" *ngFor="let pageAux of page.pages" [ngClass]="(pageAux == page.number) ? 'active' : ''"
+      <li class="page-item" *ngFor="let pageAux of page.pages; let i = index" [ngClass]="(pageAux == page.number) ? 'active' : ''"
         [ngClass]="page.i == page.number ? 'active' : '' ">
-        <a class="page-link" style="cursor: pointer" (click)="changePage(pageAux)">{{pageAux+1}}</a>
+        <a id="pagination-page-{{i}}" class="page-link" style="cursor: pointer" (click)="changePage(pageAux)">{{pageAux+1}}</a>
       </li>
 
       <li tooltip="{{ next }}" class="page-item" [ngClass]="page.last ? 'disabled' : '' ">
-        <a class="page-link" *ngIf="page.last" aria-label="Next">
+        <a id="pagination-next" class="page-link" *ngIf="page.last" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
         </a>
-        <a class="page-link" style="cursor: pointer" *ngIf="!page.last" (click)="changePage(page.number+1)"
+        <a id="pagination-next-active" class="page-link" style="cursor: pointer" *ngIf="!page.last" (click)="changePage(page.number+1)"
           aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
         </a>
@@ -36,5 +37,4 @@
       -->
     </ul>
   </nav>
-
 </div>

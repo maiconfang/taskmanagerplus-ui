@@ -9,6 +9,6 @@ export class Task {
   export class TaskFilter {
     title: string;
     description: string;
-    dueDate : string;
+    dueDate : Date;
     completed: Boolean;
   }

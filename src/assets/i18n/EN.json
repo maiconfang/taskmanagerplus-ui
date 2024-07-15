@@ -431,10 +431,10 @@
 		"CONTACT_DESCRIPTION_1.3": "https://github.com/maiconfang"
 	},
 	"LOGIN": {
-		"ACCESS_SYSTEM": "Access the System",
+		"ACCESS_SYSTEM": "Task Manager Plus",
 		"LBL_LOGIN": "Login",
 		"LBL_PASSWORD": "Password",
-		"REQUIRED_LOGIN": "Login",
+		"REQUIRED_LOGIN": "The login",
 		"REQUIRED_PASSWORD": "The password",
 		"REMEMBER_ME": "Remember me",
 		"ENTER": "Enter",
@@ -442,8 +442,8 @@
 	},
 	"FORM_VALIDATIONS": {
 		"REQUIRED": " is required",
-		"MIN_LENGTH": " need to have at least ",
-		"MAX_LENGTH": " may have have at most ",
+		"MIN_LENGTH": " needs to have at least ",
+		"MAX_LENGTH": " may have at most ",
 		"CHARACTERS": " characters",
 		"EMAIL": " need to have the @"
 	},
@@ -517,8 +517,8 @@
 		"SEARCH_COLUMN_TITLE": "Task",
 		"SEARCH_COLUMN_DESCRIPTION": "Description",
 		"SEARCH_COLUMN_DUEDATE": "Due Date",
-		"TASK_LABEL_FILTER": "Title",
-		"LABEL_TITLE": "Title",
+		"TASK_LABEL_FILTER": "Task",
+		"LABEL_TITLE": "Task",
 		"LABEL_DESCRIPTION": "Description",
 		"LABEL_DUEDATE": "Due Date",
 		"LABEL_COMPLETED": "Completed",
@@ -531,7 +531,8 @@
 		"TOOLTIP_DUEDATE": "Due Date",
 		"TOOLTIP_COMPLETED": "Task Completed",
 		"YES": "Yes",
-    	"NO": "No"
+    	"NO": "No",
+		"NO_CONTENT": "No records found"
 	},
 
 	"GROUP": {
