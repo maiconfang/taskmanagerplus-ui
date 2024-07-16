@@ -57,7 +57,11 @@ export class TaskSearchComponent extends CrudSearchImpl implements OnInit {
           this.entities = data._embedded.tasks
         } else
         this.entities = [{}]
-      });
+      }
+    );
+
+    // Clear search fields after search is performed
+    this.clearSearchFields();
   }
 
   private buildQuery(formValue: any) {
@@ -81,5 +85,14 @@ export class TaskSearchComponent extends CrudSearchImpl implements OnInit {
     return query;
   }
 
+  private clearSearchFields() {
+    this.form.reset({
+      title: '',
+      description: '',
+      dueDate: '',
+      completed: null,
+      notCompleted: null
+    });
+  }
 
 }
