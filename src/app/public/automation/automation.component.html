@@ -1,83 +1,151 @@
-
 <div class="sidebar">
   <div class="sidebar-header">
-    <h3 id="automationScreen" style="margin-top: 1%; margin-left: 1%;">Automation Screen</h3>
+    <!-- Title of the automation screen section -->
+    <h3 id="automation-screen-title" class="sidebar-title">{{ 'AUTOMATION.TITLE' | translate }}</h3>
   </div>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a routerLink="/accordionAutomation">
-        <span id="automationAccordion" class="nav-link-text">Accordion</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/alertsAutomation">
-        <span id="automationAlerts" class="nav-link-text">Alerts</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/collapseAutomation">
-        <span id="automationCollapse" class="nav-link-text">Collapse</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/datepickerAutomation">
-        <span id="automationDatePicker" class="nav-link-text">Datepicker</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/dropdownsAutomation">
-        <span id="automationDropdowns" class="nav-link-text">Dropdowns</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/modalsAutomation">
-        <span id="automationModals" class="nav-link-text">Modals</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/paginationAutomation">
-        <span id="automationPagination" class="nav-link-text">Pagination</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/popoverAutomation">
-        <span id="automationPopover" class="nav-link-text">Popover</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/progressbarAutomation">
-        <span id="automationProgressbar" class="nav-link-text">Progressbar</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/ratingAutomation">
-        <span id="automationRating" class="nav-link-text">Rating</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/sortableAutomation">
-        <span id="automationSortable" class="nav-link-text">Sortable</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/tabsAutomation">
-        <span id="automationTabs" class="nav-link-text">Tabs</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/timepickerAutomation">
-        <span id="automationTimepicker" class="nav-link-text">Timepicker</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/tooltipAutomation">
-        <span id="automationTooltip" class="nav-link-text">Tooltip</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="/typeaheadAutomation">
-        <span id="automationTypeahead" class="nav-link-text">Typeahead</span>
-      </a>
-    </li>
-  </ul>
+  <div class="nav-grid">
+    <ul class="nav flex-column">
+
+      <!-- <li class="nav-item">
+        <a id="automation-link-accordion" routerLink="/accordionAutomation" class="nav-link styled-link">
+          <i class="fas fa-layer-group"></i>  {{ 'AUTOMATION.ACCORDION' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-alerts" routerLink="/alertsAutomation" class="nav-link styled-link">
+          <i class="fas fa-bell"></i>  {{ 'AUTOMATION.ALERTS' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-collapse" routerLink="/collapseAutomation" class="nav-link styled-link">
+          <i class="fas fa-compress-arrows-alt"></i>  {{ 'AUTOMATION.COLLAPSE' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-datepicker" routerLink="/datepickerAutomation" class="nav-link styled-link">
+          <i class="fas fa-calendar-alt"></i> {{ 'AUTOMATION.DATEPICKER' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-dropdowns" routerLink="/dropdownsAutomation" class="nav-link styled-link">
+          <i class="fas fa-caret-down"></i>  {{ 'AUTOMATION.DROPDOWNS' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-modals" routerLink="/modalsAutomation" class="nav-link styled-link">
+          <i class="fas fa-window-maximize"></i>  {{ 'AUTOMATION.MODALS' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-pagination" routerLink="/paginationAutomation" class="nav-link styled-link">
+          <i class="fas fa-list-ol"></i>  {{ 'AUTOMATION.PAGINATION' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-popover" routerLink="/popoverAutomation" class="nav-link styled-link">
+          <i class="fas fa-comment-dots"></i>  {{ 'AUTOMATION.POPOVER' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-progressbar" routerLink="/progressbarAutomation" class="nav-link styled-link">
+          <i class="fas fa-tasks"></i>  {{ 'AUTOMATION.PROGRESSBAR' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-rating" routerLink="/ratingAutomation" class="nav-link styled-link">
+          <i class="fas fa-star"></i>  {{ 'AUTOMATION.RATING' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-sortable" routerLink="/sortableAutomation" class="nav-link styled-link">
+          <i class="fas fa-arrows-alt"></i> {{ 'AUTOMATION.SORTABLE' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-tabs" routerLink="/tabsAutomation" class="nav-link styled-link">
+          <i class="fas fa-folder"></i>  {{ 'AUTOMATION.TABS' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-timepicker" routerLink="/timepickerAutomation" class="nav-link styled-link">
+          <i class="fas fa-clock"></i>  {{ 'AUTOMATION.TIMEPICKER' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-tooltip" routerLink="/tooltipAutomation" class="nav-link styled-link">
+          <i class="fas fa-info-circle"></i>  {{ 'AUTOMATION.TOOLTIP' | translate }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="automation-link-typeahead" routerLink="/typeaheadAutomation" class="nav-link styled-link">
+          <i class="fas fa-keyboard"></i>  {{ 'AUTOMATION.TYPEAHEAD' | translate }}
+        </a>
+      </li> -->
+
+      <li class="nav-item">
+        <a id="automation-link-input-form" routerLink="/inputFormAutomation" class="nav-link styled-link">
+          <i class="fas fa-pepper-hot"></i>  Input Form
+        </a>
+      </li>
+
+    </ul>
+  </div>
 </div>
+
+<style>
+  .sidebar {
+    padding: 15px;
+    background-color: #f8f9fa; /* Light background for the sidebar */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    max-width: 600px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the sidebar horizontally */
+  }
+
+  .sidebar-header {
+    text-align: center; /* Centered title */
+    margin-bottom: 20px;
+  }
+
+  .sidebar-title {
+    font-size: 1.5rem;
+    color: #343a40; /* Dark grey color for the title */
+  }
+
+  .nav-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 10px; /* Space between the items */
+  }
+
+  .nav-item {
+    list-style: none;
+  }
+
+  .styled-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for button effect */
+  }
+
+  .styled-link i {
+    margin-right: 8px;
+  }
+
+  .styled-link:hover {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+
+  .styled-link:active {
+    background-color: #0056b3;
+  }
+</style>

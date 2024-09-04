@@ -30,6 +30,7 @@ import { TabsAutomationComponent } from './automation/tabs-automation/tabs-autom
 import { TimepickerAutomationComponent } from './automation/timepicker-automation/timepicker-automation.component';
 import { TooltipAutomationComponent } from './automation/tooltip-automation/tooltip-automation.component';
 import { TypeaheadAutomationComponent } from './automation/typeahead-automation/typeahead-automation.component';
+import { InputFormAutomationComponent } from './automation/input-form-automation/input-form-automation.component';
 
 
 const routesPub: Routes = [
@@ -57,6 +58,7 @@ const routesPub: Routes = [
       { path: 'timepickerAutomation', component: TimepickerAutomationComponent },
       { path: 'tooltipAutomation', component: TooltipAutomationComponent },
       { path: 'typeaheadAutomation', component: TypeaheadAutomationComponent },
+      { path: 'inputFormAutomation', component: InputFormAutomationComponent },
     ]
   },
 ];
@@ -86,6 +88,7 @@ const routesPub: Routes = [
     TimepickerAutomationComponent,
     TooltipAutomationComponent,
     TypeaheadAutomationComponent,
+    InputFormAutomationComponent,
   ],
   imports: [
     CommonModule,

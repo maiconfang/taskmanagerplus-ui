@@ -4,7 +4,7 @@
 		"NAVBAR_ITEM_2": "ABOUT",
 		"NAVBAR_ITEM_3": "PROJECTS",
 		"NAVBAR_ITEM_4": "CONTACT",
-		"AUTOMATION": "AUTOMATION"
+		"NAVBAR_ITEM_5": "AUTOMATION"
 	},
 	"HOME": {
 		"PRESENTATION": "Hi, my name is Maicon Fang and I am a Sr. Software Developer | QA - Quality Assurance"
@@ -430,6 +430,27 @@
 		"CONTACT_DESCRIPTION_1.2": "https://www.linkedin.com/in/maicon-alexander-illes-fang-4673242a/",
 		"CONTACT_DESCRIPTION_1.3": "https://github.com/maiconfang"
 	},
+
+	"AUTOMATION": {
+ 	   	"TITLE": "Automation Screen",
+    	"ACCORDION": "Accordion",
+		"ALERTS": "Alerts",
+		"COLLAPSE": "Collapse",
+		"DATEPICKER": "Datepicker",
+		"DROPDOWNS": "Dropdowns",
+		"MODALS": "Modals",
+		"PAGINATION": "Pagination",
+		"POPOVER": "Popover",
+		"PROGRESSBAR": "Progressbar",
+		"RATING": "Rating",
+		"SORTABLE": "Sortable",
+		"TABS": "Tabs",
+		"TIMEPICKER": "Timepicker",
+		"TOOLTIP": "Tooltip",
+		"TYPEAHEAD": "Typeahead"
+	},
+
+
 	"LOGIN": {
 		"ACCESS_SYSTEM": "Task Manager Plus",
 		"LBL_LOGIN": "Login",

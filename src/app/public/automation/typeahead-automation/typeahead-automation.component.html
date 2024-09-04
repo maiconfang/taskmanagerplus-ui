@@ -3,11 +3,11 @@
 </button>
 <div class="custom-automation-margin">
     <h2>
-        <p>Typeahead</p>
+        <p id="typeahead-title">Typeahead</p>
     </h2>
 
-    <pre id="preId" class="card card-block card-header mb-3">Model: {{selected | json}}</pre>
-    <input id="typeaheadInput" [(ngModel)]="selected"
+    <pre id="typeahead-automation-model-display" class="card card-block card-header mb-3">Model: {{selected | json}}</pre>
+    <input id="typeahead-automation-Input" [(ngModel)]="selected"
            [typeahead]="provinces"
            class="form-control">
 

@@ -1,0 +1,41 @@
+
+<button type="button" class="btn btn-primary" style="margin-top: 1%;" routerLink="/automation">
+    Back to Automation
+</button>
+
+<section class="container mt-5">
+    <h1 class="title-screen-create">{{ titleForm }}</h1>
+
+    <form [formGroup]="form" (ngSubmit)="save()">
+
+        <div class="form-row mb-3">
+            <div class="form-group col" class="input-name-class">
+                <label class="requiredLabel">Name</label>
+                <input 
+                    id="input-form-automation-name" 
+                    name="input-name-attribute" 
+                    type="text" class="form-control just-test-using-in-selenium" 
+                    
+                    formControlName="name" tooltip="Name of input">
+                <app-form-messages-error [control]="$any(form).controls['name']" label="Name Label"></app-form-messages-error>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 d-flex justify-content-start">
+                <button id="input-form-btn-save" type="submit" class="btn btn-primary w-100" tooltip="Save"
+                    [disabled]="form.invalid">Save </button>
+            </div>
+
+        </div>
+        
+
+        <div *ngIf="submitted" class="center-data">
+            <h3>Submitted Data:</h3>
+            <p><strong>Name:</strong> {{ formData.name }}</p>
+        </div>
+        
+
+    </form>
+
+</section>

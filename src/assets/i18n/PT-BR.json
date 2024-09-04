@@ -4,7 +4,7 @@
 		"NAVBAR_ITEM_2": "SOBRE",
 		"NAVBAR_ITEM_3": "PROJETOS",
 		"NAVBAR_ITEM_4": "CONTATO",
-		"AUTOMATION": "AUTOMATIZACAO"
+		"NAVBAR_ITEM_5": "AUTOMATIZACAO"
 	},
 	"HOME": {
 		"PRESENTATION": "Olá, meu nome é Maicon Fang e sou um Senior Desenvolvedor de Software e Analista de Testes.",
@@ -431,6 +431,27 @@
 		"CONTACT_DESCRIPTION_1.2": "https://www.linkedin.com/in/maicon-alexander-illes-fang-4673242a/",
 		"CONTACT_DESCRIPTION_1.3": "https://github.com/maiconfang"
 	},
+
+	"AUTOMATION": {
+		"TITLE": "Tela de Automação",
+		"ACCORDION": "Acordeão",
+		"ALERTS": "Alertas",
+		"COLLAPSE": "Colapsar",
+		"DATEPICKER": "Seletor de Data",
+		"DROPDOWNS": "Menus Suspensos",
+		"MODALS": "Janelas Modais",
+		"PAGINATION": "Paginação",
+		"POPOVER": "Popover",
+		"PROGRESSBAR": "Barra de Progresso",
+		"RATING": "Avaliação",
+		"SORTABLE": "Ordenável",
+		"TABS": "Abas",
+		"TIMEPICKER": "Seletor de Hora",
+		"TOOLTIP": "Dica de Ferramenta",
+		"TYPEAHEAD": "Preenchimento Automático"
+	},
+	
+
 	"LOGIN": {
 		"ACCESS_SYSTEM": "Gerenciador de Tarefas Plus",
 		"LBL_LOGIN": "Login",
