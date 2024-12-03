@@ -10,7 +10,11 @@
           <app-sidebar></app-sidebar>
       </div>
       
-      <div class="col p-3">
+      <div class="col p-3 text-center"> <!-- Added 'text-center' to centralize the content -->
+        <!-- Welcome message -->
+        <h3 id="application_welcome" class="mb-2">Welcome to the System!</h3>
+        <h4 id="application_user_logged" class="mb-4">{{ userLogged }}</h4>
+
         <router-outlet></router-outlet>
       </div>
       

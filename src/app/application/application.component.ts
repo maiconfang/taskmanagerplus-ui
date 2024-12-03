@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../shared/storage/storage.service';
 
 @Component({
   selector: 'app-application',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicationComponent implements OnInit {
 
-  constructor() { }
+  userLogged = this.storage.getLocalStorage('login');
+
+  constructor(
+    private storage: StorageService,
+  ) { }
 
   ngOnInit() {
   }
